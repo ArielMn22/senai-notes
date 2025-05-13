@@ -1,0 +1,71 @@
+.page__container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.page__content {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+    width: 100%;
+
+    padding-left: 20vw;
+}
+
+.page__content__header {
+
+    height: 81px;
+    width: 100%;
+
+    background-color: red;
+
+}
+
+.page__content__main {
+
+    display: flex;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: blue;
+
+}
+
+.page__content__main__notes {
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    width: 33%;
+
+    background-color: rgb(12, 0, 147);
+
+}
+
+.page__content__main__note {
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    width: 34%;
+
+    background-color: rgb(19, 3, 196);
+
+}
+
+.page__content__main__options {
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    width: 33%;
+
+    background-color: rgb(48, 30, 251);
+
+}
