@@ -1,14 +1,24 @@
+import { useState } from "react";
 import Header from "../../components/header";
 import LeftPanel from "../../components/left-panel";
+import NotesList from "../../components/notes-list";
 import "./styles.css";
 
 function Notes() {
+
+  const [tag, setTag] = useState('');
+
+  const aoClicarNaTag = (tag) => {
+
+    setTag(tag);
+
+  }
 
   return (
     <>
       <div className="page__container">
 
-        <LeftPanel/>
+        <LeftPanel aoSalvarTag={aoClicarNaTag} enviarTag={tag => setTag(tag)}/>
 
         <div className="page__content">
 
@@ -16,8 +26,7 @@ function Notes() {
 
           <div className="page__content__main">
 
-            <div className="page__content__main__notes">
-            </div>
+            <NotesList tagSelecionada={tag} />
 
             <div className="page__content__main__note">
             </div>

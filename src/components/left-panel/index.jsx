@@ -2,7 +2,7 @@ import { faHouse, faTag } from "@fortawesome/free-solid-svg-icons";
 import HomeIcon from "../../assets/imgs/Home.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function LeftPanel() {
+function LeftPanel({ enviarTag }) {
 
   return (
     <nav className="left-panel">
@@ -27,7 +27,7 @@ function LeftPanel() {
 
         <span className="tag">Tags</span>
 
-        <button>
+        <button onClick={() => enviarTag('Cooking')}>
           <FontAwesomeIcon icon={faTag} className="icon" />
           Cooking
         </button>
