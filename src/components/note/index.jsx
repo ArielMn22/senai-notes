@@ -9,7 +9,7 @@ function Note() {
 
       <div className="image"></div>
 
-      <h1>React</h1>
+      <h1>React - Optimization</h1>
 
       <div className="info__list">
 
