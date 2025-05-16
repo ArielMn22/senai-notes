@@ -10,15 +10,7 @@
 
     padding: 20px;
 
-}
-
-.create__note__btn {
-
-    background-color: #375dfb;
-    border-radius: 5px;
-    padding: 10px;
-    border: none;
-    color: white;
+    border-right: 1px solid #E0E4EA;
 
 }
 

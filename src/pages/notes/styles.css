@@ -25,18 +25,6 @@
 
 }
 
-.page__content__main__note {
-
-    display: flex;
-    flex-direction: column;
-
-    height: 100%;
-    width: 34%;
-
-    background-color: rgb(19, 3, 196);
-
-}
-
 .page__content__main__options {
 
     display: flex;

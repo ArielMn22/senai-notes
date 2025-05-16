@@ -6,7 +6,7 @@ function NotesList() {
   return (
     <div className="page__content__main__notes">
 
-      <button className="create__note__btn">
+      <button className="btn__primary">
         + Create New Note
       </button>
 

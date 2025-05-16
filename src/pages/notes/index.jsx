@@ -3,6 +3,7 @@ import Header from "../../components/header";
 import LeftPanel from "../../components/left-panel";
 import NotesList from "../../components/notes-list";
 import "./styles.css";
+import Note from "../../components/note";
 
 function Notes() {
 
@@ -28,8 +29,7 @@ function Notes() {
 
             <NotesList tagSelecionada={tag} />
 
-            <div className="page__content__main__note">
-            </div>
+            <Note />
 
             <div className="page__content__main__options">
             </div>

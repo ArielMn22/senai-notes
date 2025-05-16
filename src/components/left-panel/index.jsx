@@ -1,4 +1,4 @@
-import { faHouse, faTag } from "@fortawesome/free-solid-svg-icons";
+import { faBoxArchive, faHouse, faTag } from "@fortawesome/free-solid-svg-icons";
 import HomeIcon from "../../assets/imgs/Home.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -17,7 +17,7 @@ function LeftPanel({ enviarTag }) {
         </ button>
         
         <button>
-          <FontAwesomeIcon icon={faHouse} className="icon" />
+          <FontAwesomeIcon icon={faBoxArchive} className="icon" />
           Archived Notes
         </ button>
 

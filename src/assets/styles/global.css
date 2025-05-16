@@ -7,11 +7,31 @@
     box-sizing: border-box;
     font-family: "Inter";
     font-size: 14px;
+    outline: none;
 
 }
 
 button {
 
     cursor: pointer;
+
+}
+
+.btn__primary {
+
+    background-color: #375dfb;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    color: white;
+}
+
+.btn__secondary {
+
+    background-color: #f3f5f8;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    color: #525866;
 
 }
