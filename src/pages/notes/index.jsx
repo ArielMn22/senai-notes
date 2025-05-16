@@ -11,7 +11,9 @@ function Notes() {
 
         <div className="page__content">
 
-          <div className="page__content__header"></div>
+          <div className="page__content__header">
+            
+          </div>
 
           <div className="page__content__main">
 

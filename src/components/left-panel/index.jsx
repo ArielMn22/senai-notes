@@ -1,4 +1,6 @@
+import { faHouse, faTag } from "@fortawesome/free-solid-svg-icons";
 import HomeIcon from "../../assets/imgs/Home.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function LeftPanel() {
 
@@ -10,39 +12,46 @@ function LeftPanel() {
       <div className="buttons-container">
 
         <button>
-          <img src={HomeIcon} alt="Home icon." />
+          <FontAwesomeIcon icon={faHouse} className="icon" />
           All Notes
         </ button>
+        
         <button>
-          <img src={HomeIcon} alt="Home icon." />
+          <FontAwesomeIcon icon={faHouse} className="icon" />
           Archived Notes
         </ button>
 
       </div>
 
       <div className="tags-container">
+
         <span className="tag">Tags</span>
 
         <button>
-          <img src={HomeIcon} alt="Home icon." />
+          <FontAwesomeIcon icon={faTag} className="icon" />
           Cooking
         </button>
+
         <button>
-          <img src={HomeIcon} alt="Home icon." />
+          <FontAwesomeIcon icon={faTag} className="icon" />
           Cooking
         </button>
+
         <button>
-          <img src={HomeIcon} alt="Home icon." />
+          <FontAwesomeIcon icon={faTag} className="icon" />
           Cooking
         </button>
+
         <button>
-          <img src={HomeIcon} alt="Home icon." />
+          <FontAwesomeIcon icon={faTag} className="icon" />
           Cooking
         </button>
+
         <button>
-          <img src={HomeIcon} alt="Home icon." />
+          <FontAwesomeIcon icon={faTag} className="icon" />
           Cooking
         </button>
+
       </div>
 
     </nav>

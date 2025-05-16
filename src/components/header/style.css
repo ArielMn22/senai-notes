@@ -43,14 +43,10 @@
 }
 
 .left-panel .buttons-container button img,
-.left-panel .buttons-container button .icon,
-.left-panel .tags-container button img,
-.left-panel .tags-container button .icon
+.left-panel .tags-container button img
  {
 
-    margin-right: 10px;
-    color: #486cff;
-    font-size: 15px;
+    margin-right: 5px;
 
 }
 
