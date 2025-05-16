@@ -1,3 +1,4 @@
+import Header from "../../components/header";
 import LeftPanel from "../../components/left-panel";
 import "./styles.css";
 
@@ -11,9 +12,7 @@ function Notes() {
 
         <div className="page__content">
 
-          <div className="page__content__header">
-            
-          </div>
+          <Header/>
 
           <div className="page__content__main">
 

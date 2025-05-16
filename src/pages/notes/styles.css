@@ -14,15 +14,6 @@
     padding-left: 15vw;
 }
 
-.page__content__header {
-
-    height: 81px;
-    width: 100%;
-
-    background-color: red;
-
-}
-
 .page__content__main {
 
     display: flex;
