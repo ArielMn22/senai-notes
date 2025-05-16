@@ -4,7 +4,7 @@
     flex-direction: column;
 
     height: 100%;
-    width: 34%;
+    width: 50%;
 
     background-color: white;
 
@@ -34,7 +34,7 @@
 
 .info__list {
     display: flex;
-    width: 60%;
+    width: 35%;
     flex-direction: column;
 }
 

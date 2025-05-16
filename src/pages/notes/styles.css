@@ -24,15 +24,3 @@
     background-color: blue;
 
 }
-
-.page__content__main__options {
-
-    display: flex;
-    flex-direction: column;
-
-    height: 100%;
-    width: 33%;
-
-    background-color: rgb(48, 30, 251);
-
-}

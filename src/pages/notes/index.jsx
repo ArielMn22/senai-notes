@@ -4,6 +4,7 @@ import LeftPanel from "../../components/left-panel";
 import NotesList from "../../components/notes-list";
 import "./styles.css";
 import Note from "../../components/note";
+import NoteOptions from "../../components/note-options";
 
 function Notes() {
 
@@ -31,8 +32,7 @@ function Notes() {
 
             <Note />
 
-            <div className="page__content__main__options">
-            </div>
+            <NoteOptions />
 
           </div>
 
