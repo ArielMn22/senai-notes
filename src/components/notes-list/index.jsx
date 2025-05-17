@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./style.css"
 import { useEffect, useState } from "react";
 
-function NotesList() {
+function NotesList({enviarNota}) {
 
   const [notes, setNotes] = useState([]);
 
@@ -33,7 +33,7 @@ function NotesList() {
       <div className="notes__list">
 
         {notes.map((note) => (
-          <div className="note__item" key={note.id}>
+          <div className="note__item" key={note.id} onClick={() => enviarNota(note)}>
             <div className="image"></div>
 
             <div className="texts">

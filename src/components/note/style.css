@@ -23,8 +23,9 @@
 
 }
 
-.page__content__main__note h1 {
+.page__content__main__note .title {
 
+    border: none;
     font-size: 24px;
     font-weight: bold;
     margin-top: 20px;

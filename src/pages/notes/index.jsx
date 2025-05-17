@@ -9,18 +9,13 @@ import NoteOptions from "../../components/note-options";
 function Notes() {
 
   const [tag, setTag] = useState('');
-
-  const aoClicarNaTag = (tag) => {
-
-    setTag(tag);
-
-  }
+  const [nota, setNota] = useState(null);
 
   return (
     <>
       <div className="page__container">
 
-        <LeftPanel aoSalvarTag={aoClicarNaTag} enviarTag={tag => setTag(tag)}/>
+        <LeftPanel enviarTag={tag => setTag(tag)}/>
 
         <div className="page__content">
 
@@ -28,9 +23,9 @@ function Notes() {
 
           <div className="page__content__main">
 
-            <NotesList tagSelecionada={tag} />
+            <NotesList enviarNota={nota => setNota(nota)} tagSelecionada={tag} />
 
-            <Note />
+            <Note notaSelecionada={nota} />
 
             <NoteOptions />
 
