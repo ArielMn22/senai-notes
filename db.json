@@ -12,5 +12,30 @@
       "email": "teste@email.com",
       "password": "12345678"
     }
+  ],
+  "tags": [
+    {
+      "name": "React"
+    },
+    {
+      "name": "Node"
+    },
+    {
+      "name": "JavaScript"
+    },
+    {
+      "name": "CSS"
+    },
+    {
+      "name": "HTML"
+    }
+  ],
+  "notes": [
+    {
+      "title": "React Development",
+      "description": "Texto",
+      "date": "29 Oct, 2024"
+    }
+    
   ]
 }
