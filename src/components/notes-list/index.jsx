@@ -1,7 +1,27 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./style.css"
+import { useEffect, useState } from "react";
 
 function NotesList() {
+
+  const [notes, setNotes] = useState([]);
+
+  useEffect(() => {
+
+    getNotes();
+
+  }, []);
+
+  const getNotes = async () => {
+
+    const response = await fetch('http://localhost:3000/notes');
+    const data = await response.json();
+
+    console.log(data);
+
+    setNotes(data);
+
+  }
 
   return (
     <div className="page__content__main__notes">
@@ -12,42 +32,25 @@ function NotesList() {
 
       <div className="notes__list">
 
-        <div className="note__item">
-        
-          <div className="image"></div>
+        {notes.map((note) => (
+          <div className="note__item" key={note.id}>
+            <div className="image"></div>
 
-          <div className="texts">
+            <div className="texts">
 
-            <p className="title">React</p>
+              <p className="title">{note.title}</p>
 
-            <div className="tags">
-              <span>Tag1</span>
-              <span>Tag2</span>
+              <div className="tags">
+                {note.tags.map((tag) => (
+                  <span key={tag}>{tag}</span>
+                ))}
+              </div>
+
+              <p className="date">{note.date}</p>
+
             </div>
-
-            <p className="date">29 Oct, 2024</p>
-
           </div>
-
-        </div>
-        <div className="note__item">
-        
-          <div className="image"></div>
-
-          <div className="texts">
-
-            <p className="title">React</p>
-
-            <div className="tags">
-              <span>Tag1</span>
-              <span>Tag2</span>
-            </div>
-
-            <p className="date">29 Oct, 2024</p>
-
-          </div>
-
-        </div>
+        ))}
 
       </div>
 

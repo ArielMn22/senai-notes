@@ -34,6 +34,42 @@
     {
       "title": "React Development",
       "description": "Texto",
+      "tags": [
+        "React",
+        "Node"
+      ],
+      "date": "29 Oct, 2024"
+    },
+    {
+      "title": "Node Development",
+      "description": "Texto",
+      "tags": [
+        "Node"
+      ],
+      "date": "29 Oct, 2024"
+    },
+    {
+      "title": "JavaScript Development",
+      "description": "Texto",
+      "tags": [
+        "JavaScript"
+      ],
+      "date": "29 Oct, 2024"
+    },
+    {
+      "title": "CSS Development",
+      "description": "Texto",
+      "tags": [
+        "CSS"
+      ],
+      "date": "29 Oct, 2024"
+    },
+    {
+      "title": "HTML Development",
+      "description": "Texto",
+      "tags": [
+        "HTML"
+      ],
       "date": "29 Oct, 2024"
     }
     
