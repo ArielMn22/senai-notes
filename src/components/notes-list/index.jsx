@@ -46,7 +46,7 @@ function NotesList({enviarNota}) {
                 ))}
               </div>
 
-              <p className="date">{note.date}</p>
+              <p className="date">{new Date(note.date).toLocaleDateString()}</p>
 
             </div>
           </div>

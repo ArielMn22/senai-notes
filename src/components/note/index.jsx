@@ -1,17 +1,64 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./style.css"
 import { faClock, faTag } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
 
 function Note({notaSelecionada}) {
+
+  const [title, setTitle] = useState("");
+  const [tags, setTags] = useState("");
+  const [description, setDescription] = useState("");
+
+  useEffect(() => {
+
+    if (notaSelecionada) {
+
+      setTitle(notaSelecionada.title);
+      setTags(notaSelecionada.tags.join(", "));
+      setDescription(notaSelecionada.description);
+
+    }
+
+  }, [notaSelecionada]);
+
+  const onSaveNote = async () => {
+
+    let response = await fetch("http://localhost:3000/notes/" + notaSelecionada.id, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        id: notaSelecionada.id,
+        title: title,
+        description: description,
+        tags: tags.split(","),
+        date: new Date().toISOString()
+      })
+    });
+
+    if (response.ok) {
+
+
+      alert("Nota salva com sucesso!");
+
+    } else {
+
+      console.log("Erro ao salvar a nota.");
+
+    }
+
+  }
 
   return (
     <div className="page__content__main__note">
 
       {notaSelecionada && (
-        <div className="image"></div>
+        <>
+          <div className="image"></div>
+          <input className="title" value={title} onChange={event => setTitle(event.target.value)} type="text" />
+        </>
       )}
-
-      <input className="title" value={notaSelecionada?.title} onChange={event => { notaSelecionada.title = event.target.value }} type="text" />
 
       {notaSelecionada && (
           <>
@@ -24,7 +71,7 @@ function Note({notaSelecionada}) {
                   <p>Tags</p>
                 </div>
 
-                <p>Tag 1, Tag2</p>
+                <input value={tags} type="text" onChange={e => setTags(e.target.value)} placeholder="Digite aqui as tags..."/>
 
               </div>
 
@@ -35,19 +82,23 @@ function Note({notaSelecionada}) {
                   <p>Last edited</p>
                 </div>
 
-                <p>29 Oct, 2024</p>
+                <p>{ new Date(notaSelecionada.date).toLocaleDateString() }</p>
 
               </div>
 
             </div>
 
-            <textarea placeholder="Type your note..."></textarea>
+            <textarea placeholder="Type your note..." value={description} onChange={e => setDescription(e.target.value)}></textarea>
 
             <div className="buttons__container">
-              <button className="btn__primary">Save</button>
-              <button className="btn__secondary">Archive</button>
+              <button className="btn__primary" onClick={() => onSaveNote()}>Save</button>
+              <button className="btn__secondary">Cancel</button>
             </div>
           </>
+      )}
+
+      {!notaSelecionada && (
+        <p>Nenhuma nota selecionada no momento.</p>
       )}
 
     </div>

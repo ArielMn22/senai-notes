@@ -63,6 +63,12 @@
 
 }
 
+.info__item input {
+
+    border: none;
+
+}
+
 .page__content__main__note textarea {
 
     padding: 20px 0px;
