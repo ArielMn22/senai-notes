@@ -4,7 +4,7 @@ import { faClock, faTag } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
-function Note({notaSelecionada}) {
+function Note({notaSelecionada, aoFecharANota}) {
 
   const [title, setTitle] = useState("");
   const [tags, setTags] = useState("");
@@ -104,7 +104,7 @@ function Note({notaSelecionada}) {
 
             <div className="buttons__container">
               <button className="btn__primary" onClick={() => onSaveNote()}>Save</button>
-              <button className="btn__secondary">Cancel</button>
+              <button className="btn__secondary" onClick={() => aoFecharANota()}>Cancel</button>
             </div>
           </>
       )}

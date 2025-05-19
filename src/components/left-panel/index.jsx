@@ -3,7 +3,7 @@ import HomeIcon from "../../assets/imgs/Home.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 
-function LeftPanel({ enviarTag }) {
+function LeftPanel({ enviarTag, listarSomenteArquivadas }) {
 
   const [tags, setTags] = useState([]);
 
@@ -22,6 +22,13 @@ function LeftPanel({ enviarTag }) {
 
   }
 
+  const aoListarTodasAsNotas = () => {
+
+    enviarTag(null);
+    listarSomenteArquivadas(false);
+    
+  }
+
   return (
     <nav className="left-panel">
 
@@ -29,12 +36,12 @@ function LeftPanel({ enviarTag }) {
 
       <div className="buttons-container">
 
-        <button onClick={() => enviarTag(null)}>
+        <button onClick={() => aoListarTodasAsNotas()}>
           <FontAwesomeIcon icon={faHouse} className="icon" />
           All Notes
         </ button>
         
-        <button>
+        <button onClick={() => listarSomenteArquivadas(true)}>
           <FontAwesomeIcon icon={faBoxArchive} className="icon" />
           Archived Notes
         </ button>
