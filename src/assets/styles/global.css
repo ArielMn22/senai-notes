@@ -8,6 +8,7 @@
     font-family: "Inter";
     font-size: 14px;
     outline: none;
+    transition: all ease .2s;
 
 }
 

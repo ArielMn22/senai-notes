@@ -62,7 +62,7 @@ function NoteOptions({ notaSelecionada }) {
     } else {
       toast.success(`Nota "${notaSelecionada.title}" deletada!`);
     }
-    
+
   };
 
   return (

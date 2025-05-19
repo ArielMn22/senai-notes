@@ -40,6 +40,16 @@
     color: #0E121B;
     margin-bottom: 5px;
 
+    width: 100%;
+
+}
+
+.left-panel .buttons-container button:hover,
+.left-panel .tags-container button:hover {
+
+    background-color: #e4e4e4;
+    border-radius: 5px;
+
 }
 
 .left-panel .buttons-container button img,

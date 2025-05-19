@@ -36,6 +36,13 @@
     padding-top: 10px;
 }
 
+.note__item:hover {
+
+    background-color: #e4e4e4;
+    border-radius: 5px;
+
+}
+
 .note__item .image {
 
     width: 20%;
