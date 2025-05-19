@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./style.css"
 import { useEffect, useState } from "react";
 
-function NotesList({enviarNota}) {
+function NotesList({enviarNota, tagSelecionada}) {
 
   const [notes, setNotes] = useState([]);
 
@@ -12,12 +12,24 @@ function NotesList({enviarNota}) {
 
   }, []);
 
+  useEffect(() => {
+
+    getNotes();
+
+  },[tagSelecionada]);
+
   const getNotes = async () => {
 
     const response = await fetch('http://localhost:3000/notes');
-    const data = await response.json();
+    let data = await response.json();
 
     console.log(data);
+
+    if (tagSelecionada) {
+
+      data = data.filter(note => note.tags.map(tag => tag.trim()).includes(tagSelecionada));
+
+    }
 
     setNotes(data);
 

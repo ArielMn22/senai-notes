@@ -29,7 +29,7 @@ function LeftPanel({ enviarTag }) {
 
       <div className="buttons-container">
 
-        <button>
+        <button onClick={() => enviarTag(null)}>
           <FontAwesomeIcon icon={faHouse} className="icon" />
           All Notes
         </ button>

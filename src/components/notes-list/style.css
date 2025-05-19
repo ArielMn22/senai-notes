@@ -26,6 +26,7 @@
 }
 
 .note__item {
+    cursor: pointer;
     display: flex;
 
     width: 100%;
