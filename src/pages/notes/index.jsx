@@ -28,7 +28,7 @@ function Notes() {
             <Note notaSelecionada={nota} />
 
             {nota && (
-              <NoteOptions />
+              <NoteOptions notaSelecionada={nota} />
             )}
 
           </div>
