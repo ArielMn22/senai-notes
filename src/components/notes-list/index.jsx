@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./style.css"
 import { useEffect, useState } from "react";
 
-function NotesList({enviarNota, tagSelecionada, somenteArquivadas}) {
+function NotesList({enviarNota, tagSelecionada, somenteArquivadas, atualizarLista}) {
 
   const [notes, setNotes] = useState([]);
 
@@ -14,8 +14,6 @@ function NotesList({enviarNota, tagSelecionada, somenteArquivadas}) {
 
   useEffect(() => {
 
-    console.log("ASDASd");
-
     getNotes();
 
   },[tagSelecionada]);
@@ -25,6 +23,12 @@ function NotesList({enviarNota, tagSelecionada, somenteArquivadas}) {
     getNotes();
 
   }, [somenteArquivadas]);
+
+  useEffect(() => {
+
+    getNotes();
+
+  }, [atualizarLista]);
 
   const getNotes = async () => {
 

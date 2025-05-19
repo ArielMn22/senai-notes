@@ -13,6 +13,8 @@ function Notes() {
 
   const [somenteArquivadas, setSomenteArquivadas] = useState(false);
 
+  const [atualizarLista, setAtualizarLista] = useState(0);
+
   return (
     <>
       <div className="page__container">
@@ -32,18 +34,24 @@ function Notes() {
               enviarNota={nota => setNota(nota)} 
               tagSelecionada={tag} 
               somenteArquivadas={somenteArquivadas} 
+              atualizarLista={atualizarLista}
             />
 
             <Note 
               notaSelecionada={nota}
               aoFecharANota={() => {
-                setNota(null)
+                setNota(null);
+                setAtualizarLista(true);
               }}
             />
 
             {nota && (
               <NoteOptions 
-                notaSelecionada={nota} 
+                notaSelecionada={nota}
+                aoFecharANota={() => {
+                  setNota(null);
+                  setAtualizarLista(atualizarLista + 1);
+                }}
               />
             )}
 

@@ -4,7 +4,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./style.css";
 
-function NoteOptions({ notaSelecionada }) {
+function NoteOptions({ notaSelecionada, aoFecharANota }) {
   const baseUrl = "http://localhost:3000/notes";
 
   const onArchiveNote = async () => {
@@ -26,6 +26,8 @@ function NoteOptions({ notaSelecionada }) {
       toast.success(`Nota "${notaSelecionada.title}" arquivada!`);
 
     }
+
+    aoFecharANota();
 
   }
 
@@ -49,6 +51,8 @@ function NoteOptions({ notaSelecionada }) {
 
     }
 
+    aoFecharANota();
+
   }
 
   const onDeleteNote = async () => {
@@ -62,6 +66,8 @@ function NoteOptions({ notaSelecionada }) {
     } else {
       toast.success(`Nota "${notaSelecionada.title}" deletada!`);
     }
+
+    aoFecharANota();
 
   };
 
