@@ -1,16 +1,16 @@
-import { faGear, faMagnifyingGlass, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./style.css";
 import { useState } from "react";
+import "./style.css";
 
 function Header() {
+  // Controla visibilidade do dropdown de usuário
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
+  // Função para deslogar: limpa localStorage e redireciona
   const onLogoutClick = () => {
-
     localStorage.clear();
     window.location.href = "/login";
-
   }
 
   return (
@@ -20,15 +20,7 @@ function Header() {
       </div>
 
       <div className="right">
-        {/* <div className="search__input">
-          <FontAwesomeIcon icon={faMagnifyingGlass} className="icon" />
-          <input type="text" placeholder="Search by title, content, or tags…" />
-        </div>
-
-        <button>
-          <FontAwesomeIcon icon={faGear} className="icon" />
-        </button> */}
-
+        {/* Menu do usuário: mostra o dropdown ao passar o mouse */}
         <div
           className="user__menu"
           onMouseEnter={() => setDropdownVisible(true)}
@@ -41,7 +33,8 @@ function Header() {
           {isDropdownVisible && (
             <div className="dropdown">
               <ul>
-                <li onClick={() => onLogoutClick()}>Logout</li>
+                {/* Item de logout */}
+                <li onClick={onLogoutClick}>Logout</li>
               </ul>
             </div>
           )}
