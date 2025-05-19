@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./style.css"
 import { faClock, faTag } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 function Note({notaSelecionada}) {
 
@@ -23,6 +24,8 @@ function Note({notaSelecionada}) {
 
   const onSaveNote = async () => {
 
+    let toastId = toast.loading("Salvando a nota...");
+
     let response = await fetch("http://localhost:3000/notes/" + notaSelecionada.id, {
       method: "PUT",
       headers: {
@@ -39,12 +42,21 @@ function Note({notaSelecionada}) {
 
     if (response.ok) {
 
-
-      alert("Nota salva com sucesso!");
+      toast.update(toastId, {
+        render: "Nota salva com sucesso!",
+        type: "success",
+        isLoading: false,
+        autoClose: 3000,
+      });
 
     } else {
 
-      console.log("Erro ao salvar a nota.");
+      toast.update(toastId, {
+        render: "Erro ao salvar a nota.",
+        type: "error",
+        isLoading: false,
+        autoClose: 3000,
+      });
 
     }
 
