@@ -39,27 +39,28 @@
     {
       "id": "9999",
       "title": "React Development",
-      "description": "Textoasd",
+      "description": "Texto.",
       "tags": [
         "React",
-        "     Node"
+        "      Node"
       ],
-      "date": "2025-05-19T18:15:08.622Z"
+      "date": "2025-05-19T18:44:01.753Z"
     },
     {
       "id": "d7b9",
       "title": "Node Development",
-      "description": "Textofdsdsfdfsasddaaaaaaa",
+      "description": "Texto 2.",
       "tags": [
         "Node",
-        "   Teste"
+        "    Teste"
       ],
-      "date": "2025-05-19T18:14:52.035Z"
+      "date": "2025-05-19T18:44:08.198Z"
     },
     {
       "id": "af12",
       "title": "JavaScript Development",
       "description": "Texto",
+      "image": "assets/sample.png",
       "tags": [
         "JavaScript"
       ],
@@ -69,6 +70,7 @@
       "id": "415b",
       "title": "CSS Development",
       "description": "Texto",
+      "image": "assets/sample.png",
       "tags": [
         "CSS"
       ],
@@ -77,6 +79,7 @@
     {
       "title": "HTML Development",
       "description": "Texto",
+      "image": "assets/sample.png",
       "tags": [
         "HTML"
       ],

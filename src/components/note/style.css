@@ -20,6 +20,17 @@
     background-image: url("../../../public/assets/sample.png");
     background-size: cover;
     background-position: center;
+    cursor: pointer;
+
+}
+
+.file__input {
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 0px;
+    height: 0px;
 
 }
 

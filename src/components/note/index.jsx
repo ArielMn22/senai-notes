@@ -9,6 +9,8 @@ function Note({notaSelecionada, aoFecharANota}) {
   const [title, setTitle] = useState("");
   const [tags, setTags] = useState("");
   const [description, setDescription] = useState("");
+  const [image, setImage] = useState(null);
+  const [imageURL, setImageURL] = useState("");
 
   useEffect(() => {
 
@@ -36,6 +38,8 @@ function Note({notaSelecionada, aoFecharANota}) {
         title: title,
         description: description,
         tags: tags.split(","),
+        // image: image,
+        image: "assets/sample.png",
         date: new Date().toISOString()
       })
     });
@@ -48,6 +52,9 @@ function Note({notaSelecionada, aoFecharANota}) {
         isLoading: false,
         autoClose: 3000,
       });
+
+      setImage(null);
+      setImageURL("");
 
     } else {
 
@@ -62,12 +69,30 @@ function Note({notaSelecionada, aoFecharANota}) {
 
   }
 
+  const aoDefinirAImagem = async (event) => {
+
+    if (event.target.files?.length == 0){
+
+      toast.warn("É necessário selecionar uma imagem.");
+      return;
+
+    }
+
+    let file = event.target.files[0];
+
+    setImage(file);
+    setImageURL(URL.createObjectURL(file));
+
+  }
+
   return (
     <div className="page__content__main__note">
 
       {notaSelecionada && (
         <>
-          <div className="image"></div>
+          <label className="image" style={{ backgroundImage: `url('${imageURL || notaSelecionada.image || "aaa"}')` }}>
+            <input onChange={(e) => aoDefinirAImagem(e)} type="file" className="file__input" />
+          </label>
           <input className="title" value={title} onChange={event => setTitle(event.target.value)} type="text" />
         </>
       )}
