@@ -40,6 +40,7 @@
       "id": "9999",
       "title": "React Development",
       "description": "Texto.",
+      "image": "assets/sample.png",
       "tags": [
         "React",
         "      Node"
@@ -50,6 +51,7 @@
       "id": "d7b9",
       "title": "Node Development",
       "description": "Texto 2.",
+      "image": "assets/sample.png",
       "tags": [
         "Node",
         "    Teste"

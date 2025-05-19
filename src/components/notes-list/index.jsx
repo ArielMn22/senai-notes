@@ -35,8 +35,6 @@ function NotesList({enviarNota, tagSelecionada, somenteArquivadas, atualizarList
     const response = await fetch('http://localhost:3000/notes');
     let data = await response.json();
 
-    console.log(data);
-
     if (tagSelecionada) {
 
       data = data.filter(note => note.tags.map(tag => tag.trim()).includes(tagSelecionada));
@@ -64,7 +62,7 @@ function NotesList({enviarNota, tagSelecionada, somenteArquivadas, atualizarList
 
         {notes.map((note) => (
           <div className="note__item" key={note.id} onClick={() => enviarNota(note)}>
-            <div className="image"></div>
+            <div className="image" style={{ backgroundImage: `url('${note.image}')` }}></div>
 
             <div className="texts">
 
