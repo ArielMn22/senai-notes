@@ -47,6 +47,7 @@
 .note__item .image {
 
     width: 20%;
+    margin-left: 10px;
     min-width: 75px;
     margin-right: 10px;
     height: 100%;
