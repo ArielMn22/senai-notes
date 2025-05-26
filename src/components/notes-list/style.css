@@ -35,6 +35,10 @@
     border-bottom: 1px solid #E0E4EA;
     padding-bottom: 10px;
     padding-top: 10px;
+
+    animation-name: show-up;
+    animation-duration: 0.5s;
+
 }
 
 .note__item:hover {

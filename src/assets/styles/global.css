@@ -8,7 +8,7 @@
     font-family: "Inter";
     font-size: 14px;
     outline: none;
-    transition: all ease .2s;
+    /* transition: all ease .2s; */
 
 }
 
@@ -25,6 +25,24 @@ button {
     padding: 10px;
     border: none;
     color: white;
+
+    animation-name: show-up;
+    animation-duration: 0.5s;
+
+}
+
+@keyframes show-up {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80% {
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 
 .btn__secondary {
@@ -34,5 +52,8 @@ button {
     padding: 10px;
     border: none;
     color: #525866;
+
+    animation-name: show-up;
+    animation-duration: 0.5s;
 
 }
